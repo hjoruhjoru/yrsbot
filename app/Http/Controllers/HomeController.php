@@ -19,11 +19,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
 		$headshotUrl = Attachment::getAttachmentUrl('users', Auth::user()->id, Attachment::TYPE_MYHEADSHOT);
