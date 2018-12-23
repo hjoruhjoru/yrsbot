@@ -13,20 +13,11 @@ fetch and upgrade packages
 ```
 apt-get update && apt-get upgrade
 ```
-install PHP
+install system requirement
 ```
 apt-get install php
-```
-install npm
-```
 apt-get install nodejs
 apt-get install npm
-```
-install mysql
-```
 apt-get install mysql-server
-```
-install git
-```
 apt-get install git
 ```
