@@ -28,6 +28,6 @@ apt-get install git
 ```
 create database in mysql and schema in database
 ```
-CREATE DATABASE chatbot;
+create database chatbot;
 source schema.sql
 ```
