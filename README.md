@@ -31,3 +31,7 @@ create database in mysql and schema in database
 create database chatbot;
 source schema.sql
 ```
+clone from git in apache root directory 
+```
+git clone https://github.com/hjoruhjoru/yrsbot.git
+```
