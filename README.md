@@ -39,5 +39,3 @@ start apache
 ```
 systemctl start apache2
 ```
-# System UI
-![yrsbot](yrsbot.png)
