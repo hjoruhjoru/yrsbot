@@ -39,5 +39,5 @@ start apache
 ```
 systemctl start apache2
 ```
-#System UI
-![Screenshot](screenshot.png)
+# System UI
+![yrsbot](yrsbot.png)
