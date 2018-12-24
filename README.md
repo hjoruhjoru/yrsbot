@@ -35,3 +35,7 @@ clone from git in apache root directory
 ```
 git clone https://github.com/hjoruhjoru/yrsbot.git
 ```
+start apache
+```
+systemctl start apache2
+```
