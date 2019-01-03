@@ -12,7 +12,8 @@
 							</li>
 						</ul>		
 						<br>
-						<input type="text" class="form-control ChatInput" @keyup.enter="sendMessage" v-model="newMessage" placeholder="Please input question.">				
+						<el-input v-model="newMessage" placeholder="Please input question." @keyup.enter.native="sendMessage"></el-input>
+						<!--input type="text" class="form-control ChatInput" @keyup.enter="sendMessage" v-model="newMessage" placeholder="Please input question."-->				
 					</div>
 				</div>
 			</div>
