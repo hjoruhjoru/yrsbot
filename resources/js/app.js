@@ -14,6 +14,8 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import ElementUI from 'element-ui'
+Vue.use(ElementUI)
 
 Vue.component('chat-component', require('./components/ChatComponent.vue'));
 Vue.component('botman-tinker', require('./components/TinkerComponent.vue'));
