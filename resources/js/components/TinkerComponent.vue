@@ -1,36 +1,22 @@
 <template>
     <div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-8">
-				<div class="card">
-					<div class="card-header">Chat</div>
-					<div class="card-body">
-						<ul class="ChatLog">
-							<li class="ChatLog__entry" v-for="message in messages" :class="{'ChatLog__entry_mine': message.isMine}">
-								<img class="ChatLog__avatar" v-bind:src="message.headshot" />
-								<p class="ChatLog__message">{{ message.text }}</p>
-							</li>
-						</ul>		
-						<br>
-						<el-input v-model="newMessage" placeholder="Please input question." @keyup.enter.native="sendMessage"></el-input>
-						<!--input type="text" class="form-control ChatInput" @keyup.enter="sendMessage" v-model="newMessage" placeholder="Please input question."-->				
-					</div>
-				</div>
-			</div>
-		</div>		
+		<header class="major">
+			<h2>Chat Room</h2>
+			<p>chat with your chatbot</p>
+		</header>
+		<div>
+			<ul class="ChatLog">
+				<li class="ChatLog__entry" v-for="message in messages" :class="{'ChatLog__entry_mine': message.isMine}">
+					<img class="ChatLog__avatar" v-bind:src="message.headshot" />
+					<p class="ChatLog__message">{{ message.text }}</p>
+				</li>
+				<li><input type="text" @keyup.enter="sendMessage" v-model="newMessage" placeholder="Please input question."></li>
+			</ul>									
+		</div>
     </div>
 </template>
 
 <style>
-    input.ChatInput {
-        width: 300px;
-        height: 25px;
-        border-radius: 5px;
-        padding: 10px;
-        position: absolute;
-        bottom: .6em;
-        left: 200px;
-    }
     ul.ChatLog {
         list-style: none;
     }
