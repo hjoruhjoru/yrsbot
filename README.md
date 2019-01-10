@@ -39,3 +39,7 @@ start apache
 ```
 systemctl start apache2
 ```
+
+# Screenshot
+
+![Screenshot](yrsbot.PNG)
