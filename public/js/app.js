@@ -47493,7 +47493,7 @@ exports = module.exports = __webpack_require__(46)(false);
 
 
 // module
-exports.push([module.i, "\ninput.ChatInput {\n    width: 300px;\n    height: 25px;\n    border-radius: 5px;\n    padding: 10px;\n    position: absolute;\n    bottom: .6em;\n    left: 200px;\n}\nul.ChatLog {\n    list-style: none;\n}\n.ChatLog {\n    max-width: 20em;\n    margin: 0 auto;\n}\n.ChatLog .ChatLog__entry {\n    margin: .5em;\n}\n.ChatLog__entry {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: end;\n        -ms-flex-align: end;\n            align-items: flex-end;\n    max-width: 100%;\n}\n.ChatLog__entry.ChatLog__entry_mine {\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n        -ms-flex-direction: row-reverse;\n            flex-direction: row-reverse;\n}\n.ChatLog__avatar {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    z-index: 1;\n    height: 50px;\n    width: 50px;\n    border-radius: 25px;\n}\n.ChatLog__entry .ChatLog__message {\n    position: relative;\n    margin: 0 12px;\n}\n.ChatLog__entry .ChatLog__message__image {\n    max-width: 100%;\n}\n.ChatLog__entry .ChatLog__message::before {\n    position: absolute;\n    right: auto;\n    bottom: .6em;\n    left: -12px;\n    height: 0;\n    content: '';\n    border: 6px solid transparent;\n    border-right-color: #ddd;\n    z-index: 2;\n}\n.ChatLog__entry.ChatLog__entry_mine .ChatLog__message::before {\n    right: -12px;\n    bottom: .6em;\n    left: auto;\n    border: 6px solid transparent;\n    border-left-color: #08f;\n}\n.ChatLog__message {\n    background-color: #ddd;\n    padding: .5em;\n    border-radius: 4px;\n    font-weight: lighter;\n    max-width: 70%;\n}\n.ChatLog__entry.ChatLog__entry_mine .ChatLog__message {\n    border-top: 1px solid #07f;\n    border-bottom: 1px solid #07f;\n    background-color: #08f;\n    color: #fff;\n}\n", ""]);
+exports.push([module.i, "\nul.ChatLog {\n    list-style: none;\n}\n.ChatLog {\n    max-width: 20em;\n    margin: 0 auto;\n}\n.ChatLog .ChatLog__entry {\n    margin: .5em;\n}\n.ChatLog__entry {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: end;\n        -ms-flex-align: end;\n            align-items: flex-end;\n    max-width: 100%;\n}\n.ChatLog__entry.ChatLog__entry_mine {\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n        -ms-flex-direction: row-reverse;\n            flex-direction: row-reverse;\n}\n.ChatLog__avatar {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    -webkit-box-flex: 0;\n        -ms-flex-positive: 0;\n            flex-grow: 0;\n    z-index: 1;\n    height: 50px;\n    width: 50px;\n    border-radius: 25px;\n}\n.ChatLog__entry .ChatLog__message {\n    position: relative;\n    margin: 0 12px;\n}\n.ChatLog__entry .ChatLog__message__image {\n    max-width: 100%;\n}\n.ChatLog__entry .ChatLog__message::before {\n    position: absolute;\n    right: auto;\n    bottom: .6em;\n    left: -12px;\n    height: 0;\n    content: '';\n    border: 6px solid transparent;\n    border-right-color: #ddd;\n    z-index: 2;\n}\n.ChatLog__entry.ChatLog__entry_mine .ChatLog__message::before {\n    right: -12px;\n    bottom: .6em;\n    left: auto;\n    border: 6px solid transparent;\n    border-left-color: #08f;\n}\n.ChatLog__message {\n    background-color: #ddd;\n    padding: .5em;\n    border-radius: 4px;\n    font-weight: lighter;\n    max-width: 70%;\n}\n.ChatLog__entry.ChatLog__entry_mine .ChatLog__message {\n    border-top: 1px solid #07f;\n    border-bottom: 1px solid #07f;\n    background-color: #08f;\n    color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -47933,19 +47933,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var axios = __webpack_require__(5);
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -48033,38 +48020,34 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Chat")]),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", [
+      _c(
+        "ul",
+        { staticClass: "ChatLog" },
+        [
+          _vm._l(_vm.messages, function(message) {
+            return _c(
+              "li",
+              {
+                staticClass: "ChatLog__entry",
+                class: { ChatLog__entry_mine: message.isMine }
+              },
+              [
+                _c("img", {
+                  staticClass: "ChatLog__avatar",
+                  attrs: { src: message.headshot }
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "ChatLog__message" }, [
+                  _vm._v(_vm._s(message.text))
+                ])
+              ]
+            )
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c(
-              "ul",
-              { staticClass: "ChatLog" },
-              _vm._l(_vm.messages, function(message) {
-                return _c(
-                  "li",
-                  {
-                    staticClass: "ChatLog__entry",
-                    class: { ChatLog__entry_mine: message.isMine }
-                  },
-                  [
-                    _c("img", {
-                      staticClass: "ChatLog__avatar",
-                      attrs: { src: message.headshot }
-                    }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "ChatLog__message" }, [
-                      _vm._v(_vm._s(message.text))
-                    ])
-                  ]
-                )
-              })
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
+          _c("li", [
             _c("input", {
               directives: [
                 {
@@ -48074,7 +48057,6 @@ var render = function() {
                   expression: "newMessage"
                 }
               ],
-              staticClass: "form-control ChatInput",
               attrs: { type: "text", placeholder: "Please input question." },
               domProps: { value: _vm.newMessage },
               on: {
@@ -48096,12 +48078,24 @@ var render = function() {
               }
             })
           ])
-        ])
-      ])
+        ],
+        2
+      )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", { staticClass: "major" }, [
+      _c("h2", [_vm._v("Chat Room")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("chat with your chatbot")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
