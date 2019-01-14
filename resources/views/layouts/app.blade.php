@@ -23,6 +23,7 @@
     <link href="{{ asset('css/extend/skel.css') }}" rel="stylesheet"/>
 	<link href="{{ asset('css/extend/style.css') }}" rel="stylesheet" />
 	<link href="{{ asset('css/extend/style-xlarge.css') }}" rel="stylesheet" />
+	<link href="{{ asset('css/extend/font-awesome.min.css') }}" rel="stylesheet" />
 	<title>yrsbot</title>
 	
 	
