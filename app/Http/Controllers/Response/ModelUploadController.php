@@ -17,10 +17,13 @@ class ModelUploadController extends Controller
 	{
 		$modelList = ResponseModel::where('user_id', '=', Auth::user()->id)->get()->keyBy('type')->toArray();
 		
-		$qapairModelId = $modelList[ResponseModel::TYPE_QAPAIR]['id'];
-		$qapairFile = ['url' => Attachment::getAttachmentUrl('response_model', $qapairModelId, Attachment::TYPE_QAPAIRMODEL), 
+		$qapairFile = ['url' => '', 'fileName' => ''];
+		if (!empty($modelList)) {
+			$qapairModelId = $modelList[ResponseModel::TYPE_QAPAIR]['id'];
+			$qapairFile = ['url' => Attachment::getAttachmentUrl('response_model', $qapairModelId, Attachment::TYPE_QAPAIRMODEL), 
 					   'fileName' => Attachment::getFileName('response_model', $qapairModelId, Attachment::TYPE_QAPAIRMODEL)];
-					   
+		}
+						   
 		return view('dialog.model', compact('qapairFile'));
 	}
 	

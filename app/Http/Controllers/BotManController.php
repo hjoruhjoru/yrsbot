@@ -19,10 +19,10 @@ class BotManController extends Controller
 		$validatedData = $request->validate([
 			'message' => 'required|string'
 		]);
+		
 		$qapair = json_decode($this->loadModel());
-		//var_dump($qapair);
 		$message = $validatedData['message'];
-		if (array_key_exists($message, $qapair)) {
+		if (json_last_error() == JSON_ERROR_NONE && array_key_exists($message, $qapair)) {
 			return $qapair->$message;
 		} 
 		
@@ -35,6 +35,8 @@ class BotManController extends Controller
 			['user_id', '=', Auth::user()->id],
 			['type', '=', ResponseModel::TYPE_QAPAIR]
 		])->first();
+		if (empty($model)) { return false; }
+		
 		$fileName = Attachment::getStoreFileName('response_model', $model->id, Attachment::TYPE_QAPAIRMODEL);
 		$contents = Storage::get('public/files/' . Auth::user()->id . '/' . $fileName);
 		return $contents;
