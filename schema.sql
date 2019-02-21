@@ -17,7 +17,7 @@ CREATE TABLE response_model (
 CREATE TABLE password_resets ( 
 	email varchar(255) NOT NULL, 
 	token varchar(255) NOT NULL, 
-	created_at TIMESTAMP, 
+	created_at TIMESTAMP
 );
 
 CREATE TABLE users ( 
@@ -27,6 +27,6 @@ CREATE TABLE users (
 	email_verified_at TIMESTAMP, 
 	password varchar(255) NOT NULL, 
 	remember_token varchar(100) , 
-	created_at TIMESTAMP, 
+	created_at TIMESTAMP default NOW(), 
 	updated_at TIMESTAMP default NOW() 
 );
