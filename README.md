@@ -39,6 +39,11 @@ start apache
 ```
 systemctl start apache2
 ```
+setup laravel config
+```
+php artisan package:discover
+php artisan key:generate
+```
 
 # Screenshot
 
