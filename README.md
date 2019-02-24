@@ -35,6 +35,24 @@ clone from git in apache root directory
 ```
 git clone https://github.com/hjoruhjoru/yrsbot.git
 ```
+
+modify apache module
+```
+DocumentRoot /var/www/html/yrsbot/public
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+        <Directory "/var/www/html/yrsbot/public">
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+```
+sudo a2enmod rewrite 
+
 start apache
 ```
 systemctl start apache2
