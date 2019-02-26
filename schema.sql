@@ -1,10 +1,16 @@
 CREATE TABLE attachments (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	file_name VARCHAR(100) NOT NULL,
-	path VARCHAR(100) NOT NULL,
+	store_file_name VARCHAR(100) NOT NULL,
+	ref_table VARCHAR(50) NOT NULL,
+	ref_id INT(11),
+	type INT(6) unsigned,
+	file_size INT(6),
+	file_type VARCHAR(50) NOT NULL,   
 	is_deleted boolean NOT NULL default 0,
 	created_at TIMESTAMP,
-	updated_at TIMESTAMP default NOW()
+	updated_at TIMESTAMP
+
 )
 
 CREATE TABLE response_model ( 
