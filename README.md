@@ -21,6 +21,7 @@ apt-get install apache2
 install system requirement
 ```
 apt-get install php
+apt-get install php-mysql
 apt-get install nodejs
 apt-get install npm
 apt-get install mysql-server
