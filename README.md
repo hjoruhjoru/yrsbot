@@ -5,7 +5,7 @@ This project provide service which can customize chatbot. You can register accou
 * apache 
 * PHP >= 7.2
 * npm
-* mysql >= 14.14
+* mysql >= 5.7.25
 * git
 
 # Installation
