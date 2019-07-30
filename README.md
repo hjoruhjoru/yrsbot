@@ -20,12 +20,7 @@ apt-get install apache2
 ```
 install system requirement
 ```
-apt-get install php
-apt-get install php-mysql
-apt-get install nodejs
-apt-get install npm
-apt-get install mysql-server
-apt-get install git
+apt-get install php php-mysql nodejs npm mysql-server git phpunit
 ```
 create database in mysql and schema in database
 ```
